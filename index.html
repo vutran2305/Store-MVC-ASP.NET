@@ -1,29 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style2.css">
-</head>
-  <body>
-    <div class="app__container">
-        <nav class="category">
-                <h3 class="category_heading">
-                  <i class="category_heading-icon fas fa-list"></i>
-                  Danh Mục
-            </h3>
-            <ul class="category-list">
-                <li class="category-item category-item--active">
-                  <a href="#" class="category-item__link">Thời Trang Nữ</a>
-                </li>
-                <li class="category-item">
-                  <a href="#" class="category-item__link">Thời Trang Nam</a>
-                </li>
-                </ul>
-              </nav>
-              </div>
-              </body>
-
-    
-                
-                 
+    <head>
+    <meta charset="utf-8">
+        <title>User setting Information Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
         
+        <div class="container">
+            <div class="leftbox">
+                <nav>
+                    <a oneclick="tabs(0)"
+                     class="tab active">
+                        <i class="fa fa-user"> </i>
+                    </a>
+                    <a oneclick="tabs(1)" 
+                    class="tab">
+                        <i class="fa fa-credit-card"> </i>
+                    </a>
+                    <a oneclick="tabs(2)" 
+                    class="tab">
+                        <i class="fa fa-tv"> </i>
+                    </a>
+                    <a oneclick="tabs(3)" 
+                    class="tab">
+                        <i class="fa fa-tasks"> </i>
+                    </a>
+                    <a oneclick="tabs(4)"
+                     class="tab">
+                        <i class="fa fa-cog"> </i>
+                    </a>
+                </nav>
+            </div>
+            <div class="rightbox">
+                <div class="profile tabShow">
+                    <h1>Personal Information</h1>
+                    <h2>Full Name</h2>
+                    <input type="text" 
+                    class="input" value="">
+                    <h2>Birthday</h2>
+                    <input type="text" 
+                    class="input" value="">
+                    <h2>Gender</h2>
+                    <input name = "Gender" type="radio"> Male
+                    <input name = "Gender" type="radio"> Female 
+                    <h2>Email</h2>
+                    <input type="text" 
+                    class="input" value="">
+                    <h2>Password</h2>
+                    <input type="password" 
+                    class="input" value="">
+                    <!-- <button>Cập nhật</button> -->
+                    <button class="btn">Update</button>
+                </div>
+                <div class="Payment tabShow">
+                    <h1>Payment Information</h1>
+                    <h2>Payment Method</h2>
+                    <input type="text" 
+                    class="input" value="MasterCard">
+                    <h2>Billing Address</h2>
+                    <input type="text" 
+                    class="input" value="">
+                    <h2>ZipCode</h2>
+                    <input type="text" 
+                    class="input" value="">
+                    <h2>Billing Date</h2>
+                    <input type="text" 
+                    class="input" value="">
+                    <h2>Redeem Card</h2>
+                    <input type="password" 
+                    class="input" value="Enter Gift Code">
+                    <!-- <button>Cập nhật</button> -->
+                    <button class="btn">Update</button>
+                </div>
+                <div class="Subcription tabShow"> 
+                    <!-- Subcription tabshow: tab đăng ký hiển thị -->
+                    <h1>Payment Information</h1>
+                    <h2>Payment Date</h2>
+                    <p> April 21 2021</p>
+                    <h2>Next Charge</h2>
+                    <p>&80.65 
+                        <span> includes tax</span>
+                    </p>
+                    <h2>Plan</h2>
+                    <p>Limited Plan</p>
+                    <h2>Monthly</h2>
+                    <p>$107.99/month</p>
+                    <!-- <button>Cập nhật</button> -->
+                    <button class="btn">Update</button>
+                </div>
+                <div class="Privacy tabShow">
+                    <!-- Privacy tabshow: Tab hiển thị quyền riêng tư -->
+                    <h1>Privacy Settings</h1>
+                    <h2>Manage Email Noti.</h2>
+                    <p></p>
+                    <h2>Manage Privacy Settings</h2>
+                    <p></p>
+                    <h2>View Terms Of Use</h2>
+                    <p></p>
+                    <h2>Personalized Ad Experience</h2>
+                    <p></p>
+                    <h2>Protect Account</h2>
+                    <p></p>
+                    <!-- <button>Cập nhật</button> -->
+                    <button class="btn">Update</button>
+                </div>
+                <div class="Settings tabShow">
+                    <!-- Privacy tabshow: Tab hiển thị quyền riêng tư -->
+                    <h1>Account Settings</h1>
+                    <h2>Sync WatchList</h2>
+                    <p></p>
+                    <h2>hold Subcription</h2>
+                    <p></p>
+                    <h2>Cancel Subcription</h2>
+                    <p></p>
+                    <h2>Your Devices</h2>
+                    <p></p>
+                    <h2>Referrals</h2>
+                    <p></p>
+                    <!-- <button>Cập nhật</button> -->
+                    <button class="btn">Update</button>
+                </div>
+            </div>
+        </div>
+        <script src="jquery/jquery.js"></script>
+        <script>
+            const tabBtn=
+            document.querySelectorAll(".tab");
+            const tabBtn=
+            document.querySelectorAll(".tabShow");
+
+            function tabs(panelIndex){
+                tab.forEach(function(node){
+                    node.style.display ="none";
+                });
+                tab[panelIndex].style.display = 
+                "block";
+            }
+            tabs(0);
+        </script>
+        <script>
+            $(".tab").click(function() {
+                $(this).addClass("active"). siblings().removeClass("active");
+            })
+        </script>
+    </body>
+</html>
